@@ -1,0 +1,11 @@
+@import "index-tem/index-template.wxss";
+page{
+    background: white
+}
+swiper{
+    height: 480rpx;
+}
+image{
+    width: 100%
+}
+

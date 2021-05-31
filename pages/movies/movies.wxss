@@ -1,0 +1,25 @@
+/* movies.wxss */
+@import "./movies-template/movies-tem.wxss";
+page{
+    background: #fff;
+}
+.container {
+  background: #f2f2f2;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+    padding: 10rpx 0;
+    background: #f2f2f2;
+}
+.search icon{
+    margin: auto 0 auto 20rpx;
+}
+
+.search input{
+    margin-left: 20rpx;
+    width: 500rpx;
+}
+
+

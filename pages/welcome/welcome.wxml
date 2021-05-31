@@ -1,0 +1,9 @@
+<!--welcome.wxml-->
+<view class="container">
+  <image src="{{userInfo.avatarUrl}}" class="userImg"></image>
+  <text class="colorTxt">{{motto}}</text>
+
+  <view class="textWrapper" bindtap="textWrapper">
+    <text class="textFont">开启小程序之旅</text>
+  </view>
+</view>

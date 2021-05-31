@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/movies/movies",
+    "pages/index/index",
+    "pages/welcome/welcome",
+    "pages/logs/logs",
+    "pages/movies/movie-details/movie-details",
+    "pages/webview/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffc0cb",
+    "navigationBarTitleText": "变身吧，皮卡丘",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#000",
+    "color": "#666",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/19.png",
+        "selectedIconPath": "images/20.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "阅读",
+        "iconPath": "images/22.png",
+        "selectedIconPath": "images/21.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

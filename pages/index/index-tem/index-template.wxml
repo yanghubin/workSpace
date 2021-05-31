@@ -1,0 +1,20 @@
+<template name="index-template">
+  <view class="article">
+    <view class="header">
+      <image src="{{item.headerImg}}"></image>
+      <text class="headerTxt">{{item.headerTxt}}</text>
+    </view>
+    <view class="title">{{item.title}}</view>
+    <image src="{{item.imgSrc}}"></image>
+    <text class="description">
+      {{item.description}}
+    </text>
+    <!-- <rich-text class="description" nodes="{{item.description}}"></rich-text> -->
+    <text class="collection">
+
+      <text class="num"> ☆ {{item.num}}</text>
+      <text class="num">❤ {{item.num}}</text>
+
+    </text>
+  </view>
+</template>

@@ -1,0 +1,15 @@
+<!--movies-tem.wxml-->
+<import src="itemMovie/itemMovie.wxml" />
+<template name="movies_list">
+  <view class="movies_list">
+    <view class="movies_header">
+      <text class="text_header">{{categoryTitle}}{{movieId}}</text>
+      <text class="text_more" catchtap="onMoreTap" x:key='unique' data-category="{{categoryTitle}}">更多＞</text>
+    </view>
+    <view class="movies_content">
+    <block wx:for="{{movie}}" wx:for-item="idx" wx:key='unique'>
+      <template is="moviesIndex" data="{{...idx}}"></template>
+    </block>
+    </view>
+  </view>
+</template>

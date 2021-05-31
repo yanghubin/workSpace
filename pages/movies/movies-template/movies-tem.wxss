@@ -1,0 +1,28 @@
+/* movies-tem.wxss */
+@import "itemMovie/itemMovie.wxss";
+.movies_list{
+    margin-bottom: 20rpx;
+    background: #fff;
+    padding: 0 20rpx;
+}
+.movies_header {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+}
+
+.text_header {
+  color: red;
+}
+
+.text_more {
+  float: right;
+  color: dodgerblue;
+}
+
+.movies_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+

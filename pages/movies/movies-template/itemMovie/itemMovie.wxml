@@ -1,0 +1,9 @@
+<import src="../startsCom/starts.wxml" />
+<template name="moviesIndex">
+  <view class="column" catchtap="onMoviesItemTap" data-id="{{movieId}}">
+    <image src="{{coverImgUrl}}" class="moviesImg"></image>
+    <text class="movies_name">{{title}}</text>
+    <!--<image src="/images/15.png" class="grade"></image>-->
+    <template is="startImg" data="{{starts:starts,average:average}}"></template>
+  </view>
+</template>

@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="wrapper-img">
+        <image src="{{isPlaying?'/images/2.jpg':postDataOne.headerImg}}"></image>
+        <image wx:if="{{isPlaying}}" src="/images/13.png" class="musicPlay" catchtap="onmusictap"></image>
+        <image wx:else src="/images/14.png" class="musicPlay" catchtap="onmusictap"></image>
+
+    </view>
+    <view class="author-message">
+        <image class="author-img" src="{{postDataOne.headerImg}}"></image>
+        <text class="author">{{postDataOne.author}}</text>
+        <text class="report">发表于</text>
+        <text class="report-time">{{postDataOne.dateTime}}</text>
+    </view>
+    <view class="borderIcon">
+        <image wx:if="{{collected}}" src="/images/10.png" class="icon01" catchtap="oncollectedtap"></image>
+        <image wx:else src="/images/9.png" class="icon01" catchtap="oncollectedtap"></image>
+        <image src="/images/11.png" catchtap="onsharetap"></image>
+    </view>
+    <!-- <view class="text-content">
+        {{postDataOne.detail}}
+    </view> -->
+    <rich-text class="text-content" nodes="{{postDataOne.detail}}"></rich-text>
+</view>

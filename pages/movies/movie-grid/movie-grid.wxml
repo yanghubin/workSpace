@@ -1,0 +1,11 @@
+<import src="../movies-template/movies-tem-index/movies-tem-index.wxml" />;
+<template name="movieGrid">
+    <text>文本显示出来了哟哟!</text>
+    <block wx:for="{{movie}}" wx:for-item="idx">
+        <template is="moviesIndex" data="{{...idx}}"></template>
+    </block>
+</template>
+
+
+
+

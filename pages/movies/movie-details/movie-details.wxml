@@ -1,0 +1,91 @@
+<!--pages/movies/movie-details/movie-details.wxml-->
+<view class="movie-details">
+  <view class="header-box">
+    <image class="m-cover" src="{{detail.images&&detail.images.medium}}"></image>
+    <view class="m-name-box">
+      <text class="name">{{detail.title}}</text>
+      <text class="h-desc">{{detail._genres||'-'}}</text>
+      <text class="h-desc">{{detail._actor||'-'}}</text>
+      <text class="h-desc">{{detail.pubdate||'-'}}上映/{{detail.durations&&detail.durations[0]}}</text>
+      <view class="btn-wrap">
+        <button size="mini">想看</button>
+        <button size="mini" class="saw">看过</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="real-time">
+    <view class="real-record-title">
+      <text class="wom">实时口碑</text>
+      <view>
+        <text class="num">{{detail.wish_count||'0'}}人想看</text>
+        <text class="num see-over">{{detail.ratings_count||'0'}}人看过</text>
+      </view>
+    </view>
+    <view class="grade-box">
+      <text class="grade">{{detail.rating&&detail.rating.average}}</text>
+      <text class="evalate">{{detail.ratings_count}}人评</text>
+    </view>
+  </view>
+
+  <view class="desc-box">
+    <view class="desc-title">
+      <text class="d-title-txt">简介</text>
+
+      <view class="expand-box" bindtap="onExpand">
+        <view class="d-title-txt">
+          {{isExpand?'收起':'展开'}}
+        </view>
+        <image src="{{isExpand?upArrow:downArrow}}" class="arrow"></image>
+      </view>
+      
+      
+    </view>
+    <view class="d-content">
+      <text class="{{isExpand?'d-content-txt':'line-clamp d-content-txt'}}">
+        {{detail.summary}}
+      </text>
+    </view>
+  </view><!--简介-->
+
+  <view class="star-box">
+    <view class="s-header">
+      演员列表
+    </view>
+    <view class="s-content">
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+        <view wx:for="{{detail.casts||[]}}" wx:for-item="i" wx:key="{{i.id}}" class="act-wrap">
+          <image src="{{i.avatars.medium}}" class="s-img act-img" mode='heightFix'></image>
+          <text class="s-name">{{i.name}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="star-box">
+    <view class="s-header">
+      电影剧照
+    </view>
+    <view class="s-content">
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+        <block wx:for="{{detail.photos||[]}}" wx:for-item="i" wx:key="{{i.id}}">
+          <image src="{{i.image}}" class="s-img" mode='heightFix'></image>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="video-clip-box star-box">
+    <view class="s-header">
+      视频资源
+    </view>
+
+    <scroll-view class="video-scroll-content" scroll-x="true" style="width: 100%">
+      <block wx:for="{{detail.videos||[]}}" wx:for-item="i" wx:key="{{i}}">
+        <image src="{{i.source.pic}}" class="v-img" mode='heightFix' bindtap="goToMovie" data-url="{{i.sample_link}}"></image>
+      </block>
+    </scroll-view>
+
+  </view>
+
+</view>

@@ -1,0 +1,37 @@
+<import src="index-tem/index-template.wxml"/>
+
+<view class="container">
+  <swiper indicator-dots="{{true}}" autoplay="{{autoplay}}" indicator-color="white" indicator-active-color="red" interval="{{interval}}" catchtap="onswipertap">
+    <block wx:for="{{imgUrls}}" wx:for-item="i" wx:key="one">
+      <swiper-item>
+        <image src="{{i.url}}" class="imgSrc" data-postId="{{i.postId}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <block wx:for="{{post.postList}}" wx:key="two">
+  <!--<view class="article">
+    <view class="header">
+      <image src="{{item.headerImg}}"></image>
+      <text class="headerTxt">{{item.headerTxt}}</text>
+    </view>
+    <view class="title">{{item.title}}</view>
+    <image src="{{item.imgSrc}}"></image>
+    <text class="description">
+      {{item.description}}
+    </text>
+    <text class="collection">
+       
+        <text class="num"> ☆ {{item.num}}</text>
+        <text class="num">❤ {{item.num}}</text>
+
+    </text>
+    </view>-->
+    <view catchtap="clickTo" data-postId="{{item.postId}}">
+        <template is="index-template" data="{{item}}"></template>
+    </view>
+    </block>
+  <view class="footer">
+    备案号京cpriangularJs   思念一把刀
+  </view>
+</view>

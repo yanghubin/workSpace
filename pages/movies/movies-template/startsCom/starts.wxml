@@ -1,0 +1,8 @@
+<template name="startImg">
+  <block wx:for="{{starts}}" wx:for-item="one" wx:key="*this">
+    <image wx:if="{{one==1}}" src="/images/16.png" class="grade"></image>
+    <image wx:elif="{{one==2}}" src="/images/18.png" class="grade"></image>
+    <image wx:else src="/images/17.png" class="grade"></image>
+  </block>
+  <text class="grade_num">{{average}}</text>
+</template>
