@@ -1,5 +1,5 @@
 
-var postsData = require("../../../posts/postList.js");//绝对路径找不到
+var postsData = require("../../../../posts/postList.js");//绝对路径找不到
 var app = getApp();
 Page({
 
